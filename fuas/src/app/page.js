@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./page.module.css";
+import styled from "styled-components";
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -19,18 +20,21 @@ export default function Home() {
 
     fetchData();
   }, []);
-
+  // const Btn = styled.button`
+  //   color: ${(props) => props.cr};
+  // `;
   return (
     <>
       <div className="bg"> </div>
       <ul className="user">
+        {/* <Btn cr="blue">버튼</Btn> */}
         <li>
-          <p>당신은 어떤</p>
-          <p>사용자인가요?</p>
-          <button>
+          <p className="name">당신은 어떤</p>
+          <p className="name">사용자인가요?</p>
+          <button className="buttons">
             <b>Teacher</b>
           </button>
-          <button>
+          <button className="buttons">
             <b>Student</b>
           </button>
         </li>

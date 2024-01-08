@@ -10,7 +10,7 @@ body {
   height: 100%;
   margin: 0 auto;
 }
-p {
+.name {
   width: 500px;
   font-size: 40px;
   color: #fff;
@@ -23,7 +23,7 @@ p {
   padding-left: 26px;
   z-index: 1;
 }
-button {
+.buttons {
   display: flex;
   align-items: center;
   width: 350px;
