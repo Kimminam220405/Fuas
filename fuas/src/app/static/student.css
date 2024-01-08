@@ -1,0 +1,22 @@
+.studentMain {
+  background-color: #030510;
+  width: 100%;
+  height: 100vh;
+}
+
+.backButton {
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.actionBar {
+  width: 100%;
+}
+
+.pageTitles {
+  width: 100%;
+}

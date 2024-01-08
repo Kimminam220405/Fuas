@@ -1,4 +1,9 @@
 .main {
   background-color: #030510;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 50%;
 }
