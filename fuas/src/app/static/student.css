@@ -46,7 +46,23 @@
 
 .move_to_section {
   width: 120px;
+  padding: 6px 0;
   border: 1px solid #fff;
   background-color: transparent;
   border-radius: 12px;
+}
+
+.student_container {
+  width: 100%;
+  height: 150px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 12px;
+  margin: 30px auto;
+  padding: 16px;
+}
+
+.student_wrap {
+  width: 100%;
+  height: 100%;
 }
