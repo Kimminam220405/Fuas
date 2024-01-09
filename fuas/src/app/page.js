@@ -1,10 +1,9 @@
-"use client";
-import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import styled from "styled-components";
+import "./globals.css";
+import "./static/main.css";
 
 export default function Home() {
-  const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,25 +19,23 @@ export default function Home() {
 
     fetchData();
   }, []);
-  // const Btn = styled.button`
-  //   color: ${(props) => props.cr};
-  // `;
+
   return (
-    <>
-      <div className="bg"> </div>
-      <ul className="user">
-        {/* <Btn cr="blue">버튼</Btn> */}
-        <li>
-          <p className="name">당신은 어떤</p>
-          <p className="name">사용자인가요?</p>
-          <button className="buttons">
-            <b>Teacher</b>
-          </button>
-          <button className="buttons">
-            <b>Student</b>
-          </button>
-        </li>
-      </ul>
-    </>
+    <main className={styles.main}>
+      <div class="content_wrap">
+        <div className="header">
+          <h1 className="title">
+            Fusion Room <br /> Apply Service
+          </h1>
+          <p className="subTitle">
+            <span className="briket"> [ </span> 모두의 융합실을 위하여 <span className="briket"> ] </span>
+          </p>
+        </div>
+
+        <button type="button" className="startBtn" onClick={() => (location.href = "/selectPosition")}>
+          Get Started
+        </button>
+      </div>
+    </main>
   );
 }
