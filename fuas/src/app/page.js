@@ -1,9 +1,24 @@
 import styles from "./page.module.css";
+import styled from "styled-components";
 import "./globals.css";
 import "./static/main.css";
 
 export default function Home() {
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/api/route");
+        const result = await response.json();
+        setData(result.data);
+        console.log(result);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <main className={styles.main}>
