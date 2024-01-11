@@ -12,11 +12,9 @@ function queryPromise(queryString) {
 }
 
 export default async function handler(req, res) {
-  let updateQuery = `UPDATE count_table SET total_count = (SELECT COUNT(*) FROM student_table WHERE reservation = 1) WHERE id = 1`;
-  let queryString = `SELECT * from count_table`;
+  let queryString = "SELECT * from notice_table order by id ASC";
 
   try {
-    await queryPromise(updateQuery);
     const rows = await queryPromise(queryString);
     res.status(200).json(rows);
   } catch (error) {

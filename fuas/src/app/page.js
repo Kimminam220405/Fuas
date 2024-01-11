@@ -1,15 +1,12 @@
 "use client";
 import styles from "./page.module.css";
-import styled from "styled-components";
 import "./globals.css";
 import "./static/main.css";
 
 export default function Home() {
-
-
   return (
     <main className={styles.main}>
-      <div class="content_wrap">
+      <div className="content_wrap">
         <div className="header">
           <h1 className="title">
             Fusion Room <br /> Apply Service

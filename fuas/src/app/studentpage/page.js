@@ -4,6 +4,8 @@ import styles from "../page.module.css";
 import ActionBar from "../components/actionBar";
 import RemainingNumberofPeople from "../components/Remaining_number_of_people";
 import UserData from "../components/UserData";
+import Button from "../components/moveBtn";
+import MoveSection from "../components/moveSections";
 import "../static/student.css";
 
 export default function Home() {
@@ -25,20 +27,29 @@ export default function Home() {
       }
     };
 
-    if (userData.length === 0) {
-      fetchData();
-    }
-  }, [userData]);
+    fetchData();
+  }, []);
+
+  const formatTime = (timeString) => {
+    return new Date(`2000-01-01T${timeString}`).toLocaleTimeString("ko", { hour: "2-digit", minute: "2-digit" });
+  };
 
   return (
     <div className={styles.main}>
-      <ActionBar pageTitle="신청방" />
-      <RemainingNumberofPeople remaingNumber={totalCount} />
-
-      {/* userData 배열의 각 요소에 대해 UserData 컴포넌트를 반복 생성 */}
+      <ActionBar pageTitle="신청방" backUrl="/selectPosition" />
+      <RemainingNumberofPeople remainingNumber={totalCount} />
+      <MoveSection />
       {userData.map((user) => (
-        <UserData key={user.id} student_id={user.student_id} student_name={user.student_name} reservation={user.reservation} start_time={user.start_time} end_time={user.end_time} />
+        <UserData
+          key={user.id}
+          student_id={user.student_id}
+          student_name={user.student_name}
+          reservation={user.reservation}
+          start_time={formatTime(user.start_time)}
+          end_time={formatTime(user.end_time)}
+        />
       ))}
+      <Button buttonClass="reservationStart" targetUrl="/reservation" buttonName="신청하기" />
     </div>
   );
 }
