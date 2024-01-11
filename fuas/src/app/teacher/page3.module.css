@@ -1,0 +1,25 @@
+.img {
+  width: 500px;
+  margin-top: 300px;
+}
+.BT {
+  font-size: 30px;
+  color: white;
+  font-weight: normal;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+.bg {
+  width: 500px;
+  height: 911px;
+  background-color: black;
+  position: absolute;
+  z-index: -1;
+}
+.text {
+  color: white;
+  position: relative;
+  left: 140px;
+  top: 250px;
+  font-size: 30px;
+}
