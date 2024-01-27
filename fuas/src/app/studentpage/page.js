@@ -27,8 +27,10 @@ export default function Home() {
       }
     };
 
-    fetchData();
-  }, []);
+    if (userData.length === 0) {
+      fetchData();
+    }
+  }, [userData]);
 
   const formatTime = (timeString) => {
     return new Date(`2000-01-01T${timeString}`).toLocaleTimeString("ko", { hour: "2-digit", minute: "2-digit" });

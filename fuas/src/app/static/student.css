@@ -37,7 +37,6 @@
   border: 1px solid #fff;
   background-color: transparent;
   border-radius: 12px;
-  cursor: pointer;
 }
 
 .student_container {
@@ -47,7 +46,11 @@
   background-color: transparent;
   border-radius: 12px;
   margin: 30px auto;
-  padding: 20px;
+  padding: 16px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 .student_wrap {
