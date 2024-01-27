@@ -59,7 +59,7 @@ function UserInfo() {
           <span>종료 시간</span>
           <input type="time" value={endTime} onChange={(e) => setEndTime(e.target.value)} />
           <button type="submit" className="submit">
-            이용규칙 확인하기
+            신청하기
           </button>
         </form>
       </div>
